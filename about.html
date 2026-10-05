@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Steady State Tech</title><meta name="description" content="About Steady State Tech, the company behind Prenta."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Figtree:wght@400;600;700&display=swap"><style>
+/* Layout: single centered column, quiet header, one steady-state curve motif in the hero */
+/* Prenta brand palette: Midnight #110f37, Sky #57ccff, Green #42ce81, Yellow #ffdb43, Lavender #d9d2ff */
+:root{
+  --bg:#ffffff; --surface:#d9d2ff; --ink:#110f37; --muted:#4a4870; --line:#e4e1f7;
+  --teal:#110f37; --teal-ink:#ffffff; --marigold:#57ccff;
+  --sky:#57ccff; --green:#42ce81; --yellow:#ffdb43;
+  --display:"Nunito","Haboro Soft",ui-rounded,ui-sans-serif,system-ui,sans-serif;
+  --body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#110f37; --surface:#221f5c; --ink:#f4f3ff; --muted:#bdb8e6; --line:#2c2966;
+  --teal:#57ccff; --teal-ink:#110f37; --marigold:#57ccff; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#110f37; --surface:#221f5c; --ink:#f4f3ff; --muted:#bdb8e6; --line:#2c2966;
+  --teal:#57ccff; --teal-ink:#110f37; --marigold:#57ccff; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+.wrap{max-width:62rem;margin:0 auto;padding-inline:1.25rem}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1.5rem;padding-block:1.1rem}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:.04em}
+.brand svg{flex:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;padding-block:.25rem;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--marigold)}
+a:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px}
+main{padding-block:3.5rem 4.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.12;letter-spacing:-.005em;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:800;max-width:18ch}
+h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:800}
+p{margin:0;max-width:62ch}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:1.1rem}
+.lede{font-size:1.2rem;color:var(--muted)}
+.curve{width:100%;max-width:100%;height:auto;display:block;margin-block:2.5rem 0}
+.curve path{fill:none;stroke-linecap:round}
+.curve .settle{stroke:var(--green);stroke-width:3}
+.curve .base{stroke:var(--line);stroke-width:1.5;stroke-dasharray:4 6}
+.curve circle{fill:var(--yellow)}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}
+.btn{display:inline-block;padding:.75rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:.98rem}
+.btn.primary{background:var(--teal);color:var(--teal-ink)}
+.btn.ghost{color:var(--ink);border:1.5px solid var(--line)}
+.btn:hover{filter:brightness(1.06)}
+section+section{margin-top:4rem}
+.feature{background:var(--surface);border-radius:1.25rem;padding:2rem 1.5rem;display:grid;gap:1.5rem;grid-template-columns:1fr}
+@media (min-width:760px){.feature{grid-template-columns:1.2fr 1fr;padding:2.5rem;align-items:center}}
+.feature ul{margin:0;padding-left:1.1rem;display:grid;gap:.5rem;color:var(--ink)}
+.grid{display:grid;gap:2rem 2.5rem;grid-template-columns:1fr}
+@media (min-width:760px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:repeat(3,1fr)}}
+.grid > *{min-width:0}
+.item{border-top:2px solid var(--line);padding-top:1.1rem;display:flex;flex-direction:column;gap:.5rem}
+.item p{color:var(--muted)}
+.contact dl{margin:0;display:grid;gap:1.5rem}
+.contact dt{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.contact dd{margin:.25rem 0 0;font-size:1.2rem;font-weight:600}
+.contact dd a{color:var(--ink);text-decoration:none;border-bottom:3px solid var(--sky);word-break:break-word}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;padding-block:1.5rem}
+footer.site a{color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.curve .settle{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 1.8s ease-out .2s forwards}}
+@keyframes draw{to{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="index.html"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="var(--ink)"/><path d="M4 16c3-9 5 6 8-2s4 2 6 0 4-1 6-1" fill="none" stroke="var(--sky)" stroke-width="2.2" stroke-linecap="round"/></svg>Steady State Tech</a><nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html" aria-current="page">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header>
+<main><div class="wrap"><section class="stack"><p class="eyebrow">About us</p><h1>Built for the household behind the household.</h1>
+<p class="lede">Steady State Tech is the software company behind Prenta, based in the Chicago area.</p></section>
+<section class="grid two"><div class="item"><h3>Why we exist</h3><p>Most families have one person quietly tracking the appointments, renewals, and seasonal chores that keep a home running. We build software that makes that work visible and easier to share, so it doesn't all live in one person's head.</p></div>
+<div class="item"><h3>The name</h3><p>In engineering, a system in a steady state stays balanced even while things keep moving through it. That's what we want for families: life keeps happening, and the household stays on track.</p></div>
+<div class="item"><h3>Our founder</h3><p>Erika Crowther founded Steady State Tech and leads product. She built Prenta after realizing how many friends and neighbors were juggling the same invisible to-do list.</p></div>
+<div class="item"><h3>How we work</h3><p>We design for real families, test with real households, and never sell your data or use it for advertising.</p></div></section></div></main>
+<footer class="site"><div class="wrap"><span>© 2026 Steady State LLC · Chicago, Illinois</span><a href="mailto:support@steadystatetech.com">support@steadystatetech.com</a></div></footer>
+</body>
+</html>
